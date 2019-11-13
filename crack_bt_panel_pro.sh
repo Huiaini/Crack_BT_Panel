@@ -25,10 +25,6 @@ echo "如已安装更高版本的宝塔面板，请先卸载高版本再安装"
 echo "如已安装其他种类的面板，或 LNMP 之类的运行环境、一键包，建议备份好数据，重装干净系统再安装"
 echo "使用本脚本出现的任何不良后果，本人概不负责"
 echo ""
-echo -e "${blue}[支持]"
-echo -e "${plain}zhihu: https://www.zhihu.com/people/deepdarkfantastic"
-echo "email: net.core@outlook.com"
-echo ""
 
 #确认安装
 while [ "$go" != 'y' ] && [ "$go" != 'n' ]
@@ -63,7 +59,7 @@ CentOS_Version=`cat /etc/redhat-release|sed -r 's/.* ([0-9]+)\..*/\1/'`
 
 #CentOS 6 专用 python
 install_python_for_CentOS6() {
-    py_for_centos="https://raw.githubusercontent.com/leitbogioro/SSR.Go/master/python_for_centos6.sh"
+    py_for_centos="https://raw.githubusercontent.com/Huiaini/Crack_BT_Panel/master/python_for_centos6.sh"
     py_intall="python_for_centos6.sh"
     yum install wget -y
     wget ${py_for_centos}
@@ -90,13 +86,13 @@ install_python_for_CentOS7() {
 }
 
 install_btPanel_for_CentOS() {
-    yum install -y wget && wget -O install.sh https://git.io/fj0zQ && bash install.sh
+    yum install -y wget && wget -O install.sh https://git.io/JereP && bash install.sh
     wget -O update.sh https://git.io/fj0zD && bash update.sh pro
 }
 
 install_btPanel_for_APT() {
-    wget -O install.sh https://git.io/fj0z5 && bash install.sh
-    wget -O update.sh https://git.io/fj0zD && bash update.sh pro
+    wget -O install.sh https://git.io/Jere1 && bash install.sh
+    wget -O update.sh https://git.io/JereM && bash update.sh pro
 }
 
 #破解步骤
@@ -142,13 +138,13 @@ clean_up() {
 # 预安装组件
 components(){
     cd /root
-    wget -O lib.sh https://git.io/fjmak
+    wget -O lib.sh https://git.io/JereD
     mv lib.sh /www/server/panel/install
-    wget -O nginx.sh https://git.io/fj0O9
+    wget -O nginx.sh https://git.io/Jerey
     mv nginx.sh /www/server/panel/install
     if [ -f /www/server/panel/install/install_soft.sh ]; then
         rm -rf install_soft.sh
-        wget -O install_soft.sh https://git.io/fj03A
+        wget -O install_soft.sh https://git.io/JereS
         mv install_soft.sh /www/server/panel/install
     fi
 }
@@ -158,7 +154,7 @@ vip_plugin(){
     # 默认安装所有付费高级插件
     cd /www/server/panel/plugin
     if [ ! -d "/masterslave" ]; then
-        wget -O vip_plugin.zip https://git.io/fj0VQ
+        wget -O vip_plugin.zip https://git.io/Jere9
         unzip vip_plugin.zip
         rm -f vip_plugin.zip
     fi
@@ -185,7 +181,7 @@ elif [[ ${OS} == 'CentOS' ]] && [[ ${CentOS_Version} -eq "6" ]]; then
     #enable_ssl
     #vip_plugin
 elif [[ ${OS} == 'Ubuntu' ]] || [[ ${OS} == 'Debian' ]]; then
-    apt-get update
+    apt-get update -y
     apt-get install ca-certificates -y
     apt-get install sudo apt-transport-https vim vim-gnome libnet-ifconfig-wrapper-perl socat vim vim-gnome vim-gtk libnet-ifconfig-wrapper-perl socat lrzsz fail2ban wget curl unrar unzip cron dnsutils net-tools git git-svn make cmake gdb tig -y
     install_btPanel_for_APT
