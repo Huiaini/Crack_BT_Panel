@@ -87,7 +87,7 @@ install_python_for_CentOS7() {
 
 install_btPanel_for_CentOS() {
     yum install -y wget && wget -O install.sh https://git.io/JereP && bash install.sh
-    wget -O update.sh https://git.io/fj0zD && bash update.sh pro
+    wget -O update.sh https://git.io/JereM && bash update.sh pro
 }
 
 install_btPanel_for_APT() {
