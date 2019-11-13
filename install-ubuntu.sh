@@ -7,11 +7,9 @@ echo "
 +----------------------------------------------------------------------
 | Bt-WebPanel 5.x FOR Ubuntu/Debian
 +----------------------------------------------------------------------
-| Copyright © 2015-2018 BT-SOFT(http://www.bt.cn) All rights reserved.
+| Copyright © 2015-2019 BT-SOFT(http://www.bt.cn) All rights reserved.
 +----------------------------------------------------------------------
 | The WebPanel URL will be http://SERVER_IP:8888 when installed.
-+----------------------------------------------------------------------
-| This script modified by leitbogioro.
 +----------------------------------------------------------------------
 "
 deepinSys=`cat /etc/issue`
